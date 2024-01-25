@@ -1,9 +1,9 @@
 const http = require("http");
 const fs = require("fs");
-const url = require("url");
+const url = require('url');
 
 const myServer = http.createServer((req, res) => {
-  if (req.url === "/favicon.ico") return res; //.end();
+  if (req.url === "/favicon.ico") return res//.end();
   const log = `${Date.now()}: ${req.url} New req received\n`;
   const myUrl = url.parse(req.url, true);
   console.log(myUrl);
@@ -12,15 +12,8 @@ const myServer = http.createServer((req, res) => {
       case "/":
         res.end("Hello from Server");
         break;
-      case "/signup":
-        if (req.method === "GET") {
-          res.end("This is a signup form");
-        } else if (req.method === "POST") {
-          res.end("Success");
-        }
-        break;
       case "/about":
-        const username = myUrl.query.myname;
+        const username = myUrl.query.myname
         res.end(`Hi, ${username}`);
         break;
       default:
