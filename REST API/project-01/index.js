@@ -33,6 +33,11 @@ app.get("/users", (req, res) => {
 });
 
 app.get("/api/users", (req, res) => {
+  res.setHeader("X-MyName", "Mehul Lodha"); // Custom Headers
+  // Always add X to custom headers as a good practice
+  // Here we are setting headers in response side, but for setting them in request side we write req.setHeaders...
+
+
   return res.json(users);
 });
 
