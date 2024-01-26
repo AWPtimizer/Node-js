@@ -10,7 +10,7 @@ GET /api/users/:id
 GET /users/1 - GET the user with ID 1 - Done
 GET /users/2 - GET the user with ID 2 - Done
 
-POST /users - Create new user
+POST /users - Create new user - DOne
 
 PATCH /users/1 - Edit the user with id 1
 
