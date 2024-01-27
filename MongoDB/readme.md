@@ -4,6 +4,6 @@ Schema - Define the Structure
 
 Important mongo shell commands ->
 1. show dbs
-2. use <db-name>
+2. use "db-name"
 3. show collections
-4. db.<collection-name>.find()
+4. db."collection-name".find()
