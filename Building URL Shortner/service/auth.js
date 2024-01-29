@@ -13,7 +13,12 @@ function setUser(user) {
 
 function getUser(token) {
   if (!token) return null;
-  return jwt.verify(token, secretKey);
+  try {
+    return jwt.verify(token, secretKey);
+  } catch (error) {
+    return null;
+  }
+  
 }
 
 module.exports = {
